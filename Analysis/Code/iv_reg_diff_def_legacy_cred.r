@@ -312,5 +312,5 @@ etable(est_iv1.19, est_iv1.20, est_iv2.19, est_iv2.20,
        tex = TRUE,
        title = "Baseline IV results, borrowing from DAC members and traditional MDBs and from members of the Paris Club and traditional MDBs, middle-income countries", 
        label = "tab:results_baseline_iv_overall_dacs+mdbs_only_other",
-       file = "IV_tables/iv_robustness_alt_def_loc.tex", 
+       file = "Analysis/MIC_results/IV_tables/iv_robustness_alt_def_loc.tex", 
        replace = TRUE)

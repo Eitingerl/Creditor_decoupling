@@ -66,7 +66,7 @@ etable(est_iv1.4, est_iv2.4,
        title = "IV specification reduced form, middle-income countries",
        label = "tab:IV_reduced_form_other",
        tex = TRUE,  
-       file = "IV_tables/IV_reduced_form.tex", 
+       file = "Analysis/MIC_results/IV_tables/IV_reduced_form.tex", 
        replace = TRUE)
 
 
@@ -211,7 +211,7 @@ etable(est_iv1.5, est_iv1.6, est_iv1.7, est_iv2.5, est_iv2.6, est_iv2.7,
        tex = TRUE,
        title = "Potential time breaks, middle-income countries",
        label = "tab:results_iv_time_breaks_other",
-       file = "IV_tables/results_iv_time_breaks.tex", 
+       file = "Analysis/MIC_results/IV_tables/results_iv_time_breaks.tex", 
        replace = TRUE)
 
 
@@ -310,7 +310,7 @@ etable(est_iv1.8, est_iv2.8,
        tex = TRUE,
        title = "IV results for private creditor share, middle-income countries",
        label = "tab:results_baseline_iv_overall_prvt_cred_other",
-       file = "IV_tables/results_baseline_iv_overall_table_prvt_cred.tex", 
+       file = "Analysis/MIC_results/IV_tables/results_baseline_iv_overall_table_prvt_cred.tex", 
        replace = TRUE)
 
 
@@ -514,7 +514,7 @@ etable(est_iv1.9, est_iv2.9,
        tex = TRUE,
        title = "IV results with share of commitments from legacy creditors, middle-income countries", 
        label = "tab:iv_commit_other",
-       file = "IV_tables/IV_robustness_commit.tex", 
+       file = "Analysis/MIC_results/IV_tables/IV_robustness_commit.tex", 
        replace = TRUE)
 
 
@@ -623,7 +623,7 @@ etable(est_iv1.10, est_iv1.11, est_iv2.10, est_iv2.11,
        title = "IV specification robustness check: alternative specifications, middle-income countries",
        label = "tab:IV_robustness_alt_specifications_other",
        tex = TRUE,  
-       file = "IV_tables/IV_robustness_alt_specifications.tex", 
+       file = "Analysis/MIC_results/IV_tables/IV_robustness_alt_specifications.tex", 
        replace = TRUE)
 
 
@@ -722,7 +722,7 @@ etable(est_iv1.12, est_iv1.13, est_iv2.12, est_iv2.13,
        title = "IV specification robustness check: alternative samples, middle-income countries",
        label = "tab:IV_robustness_sample_changes_other",
        tex = TRUE, 
-       file = "IV_tables/IV_robustness_sample_changes.tex", 
+       file = "Analysis/MIC_results/IV_tables/IV_robustness_sample_changes.tex", 
        replace = TRUE)
 
 
@@ -779,7 +779,7 @@ etable(est_iv1.14, est_iv2.14,
        tex = TRUE,
        title = "Baseline IV results, upper-middle-income countries",
        label = "tab:iv_robustness_umics_only",
-       file = "IV_tables/IV_robustness_UMICs_only.tex", 
+       file = "Analysis/MIC_results/IV_tables/IV_robustness_UMICs_only.tex", 
        replace = TRUE)
 
 
@@ -918,7 +918,7 @@ etable(est_iv1.15, est_iv1.16, est_iv2.15, est_iv2.16,
        tex = TRUE,
        title = "IV results with different specifications of the share part of the IV, middle-income countries",
        label = "tab:results_iv_alt_share_other",
-       file = "IV_tables/results_iv_alt_share.tex", 
+       file = "Analysis/MIC_results/IV_tables/results_iv_alt_share.tex", 
        replace = TRUE)
 
 
@@ -1020,7 +1020,7 @@ etable(est_iv1.17, est_iv1.18, est_iv2.17, est_iv2.18,
        tex = TRUE,
        title = "IV results with instrumented longer lags, middle-income countries",
        label = "tab:results_iv_instr_long_lags_other",
-       file = "IV_tables/results_iv_instr_long_lags.tex", 
+       file = "Analysis/MIC_results/IV_tables/results_iv_instr_long_lags.tex", 
        replace = TRUE)
 
 
@@ -1171,7 +1171,7 @@ etable(est_iv1.1, est_1perc_health, est_5perc_health, est_10perc_health,
        title = "IV results without extreme instrument values, health spending, ",
        label = "tab:results_iv_trim_top_health_",
        notes = "Country-clustered standard errors are in parentheses. Stars indicate significance at *** $p < 0.001$; ** $p < 0.01$; * $p < 0.05$; and + $p < 0.1$.",
-       file = "IV_tables/results_iv_trim_top_health.tex", 
+       file = "Analysis/MIC_results/IV_tables/results_iv_trim_top_health.tex", 
        replace = TRUE)
 
 etable(est_iv2.1, est_1perc_educ, est_5perc_educ, est_10perc_educ,
@@ -1186,7 +1186,7 @@ etable(est_iv2.1, est_1perc_educ, est_5perc_educ, est_10perc_educ,
        title = "IV results without extreme instrument values, education spending, ",
        label = "tab:results_iv_trim_top_educ_",
        notes = "Country-clustered standard errors are in parentheses. Stars indicate significance at *** $p < 0.001$; ** $p < 0.01$; * $p < 0.05$; and + $p < 0.1$.",
-       file = "IV_tables/results_iv_trim_top_educ.tex", 
+       file = "Analysis/MIC_results/IV_tables/results_iv_trim_top_educ.tex", 
        replace = TRUE)
 
 
@@ -1243,7 +1243,7 @@ etable(est_mil_exp_h, est_mil_exp_e,
        tex = TRUE,
        title = "IV results for military spending, middle-income countries",
        label = "tab:results_iv_unrel_outcome_other",
-       file = "IV_tables/results_iv_unrel_outcome.tex", 
+       file = "Analysis/MIC_results/IV_tables/results_iv_unrel_outcome.tex", 
        replace = TRUE)
 
 
@@ -1372,6 +1372,6 @@ robust_vcovs <- list(nw_vcov_h, nw_vcov_e)
 
 modelsummary(robustness_models_ts,
              vcov = robust_vcovs,
-             output = "IV_tables/IV_robustness_NW_ts.tex", # Change to "robustness_table.tex" to save as file
+             output = "Analysis/MIC_results/IV_tables/IV_robustness_NW_ts.tex", # Change to "robustness_table.tex" to save as file
              stars = TRUE,
              coef_rename = c("X_t" = "Share of LD (Residualized)"))

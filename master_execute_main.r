@@ -331,30 +331,26 @@ source("Analysis/Code/pre-analysis_overall.R") # data exploration and visualizat
 ################################################################################
 
 ################################## LICs first ##################################
-setwd("Analysis/LIC_results/")
-
 data_df <- data_df_lic
-source("Analysis/Code/pre-analysis_sample.R")
+source("Analysis/Code/pre-analysis_lics.R")
 
 data_df_plm <- pdata.frame(data_df_lic, index = c("debtor_country", "year"))
 
-source("Analysis/Code/summary_stats.R") # summary statistics table
+source("Analysis/Code/summary_stats_lics.R") # summary statistics table
 
-source("Analysis/Code/iv_reg.R") 
-source("Analysis/Code/mediation.R") 
+source("Analysis/Code/iv_reg_lics.R") 
+source("Analysis/Code/mediation_lics.R") 
 
 
 ################################### Now MICs ###################################
-setwd("Analysis/MIC_results/")
-
 data_df <- data_df_mic
-source("Analysis/Code/pre-analysis_sample.R")
+source("Analysis/Code/pre-analysis_mics.R")
 
 data_df_plm <- pdata.frame(data_df_mic, index = c("debtor_country", "year"))
 
-source("Analysis/Code/summary_stats.R") 
+source("Analysis/Code/summary_stats_mics.R") 
 
-source("Analysis/Code/iv_reg.R") 
+source("Analysis/Code/iv_reg_mics.R") 
 source("Analysis/Code/robustness.R") 
 source("Analysis/Code/iv_reg_diff_def_legacy_cred.r")
-source("Analysis/Code/mediation.R") 
+source("Analysis/Code/mediation_mics.R") 
