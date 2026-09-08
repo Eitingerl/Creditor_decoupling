@@ -38,5 +38,5 @@ jobs:
         shell: Rscript {0}
 
       - name: Run Master Script
-        run: Rscript master_execute_main.R
+        run: Rscript master_execute_main.r
 
