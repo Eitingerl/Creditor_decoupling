@@ -63,7 +63,7 @@ datasummary(All(df_health_clean) ~ N + Mean + SD + Min + Max,
             data = df_health_clean,
             title = "Summary statistics, health spending, middle-income countries",
             notes = "The statistics of explanatory variables refer to their one-year lagged version which is used in the models.",
-            output = "General_tables/summary_table_health_exp.tex")
+            output = "Analysis/MIC_results/General_tables/summary_table_health_exp.tex")
 
 
 df_educ_clean <- as.data.frame(data_df_plm_educ)[ , all_vars_e]
