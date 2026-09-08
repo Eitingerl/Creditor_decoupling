@@ -1,0 +1,32 @@
+\begin{table}
+\centering
+\begin{talltblr}[         %% tabularray outer open
+caption={Correlation matrix of independent variables,},
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]},
+hline{2}={1-17}{solid, black, 0.05em},
+hline{1}={1-17}{solid, black, 0.1em},
+hline{18}={1-17}{solid, black, 0.1em},
+column{1}={}{halign=l},
+column{2-17}={}{halign=r},
+}                     %% tabularray inner close
+& LD share & Log GDP per capita & GDP growth & Dependency ratio & Urbanization rate & Trade openness & FX rate perc. change & Political rights & Capital account openness & Average inflation rate & War & Active IMF program & ODA & Average interest rate & Hist. reliance on LD & FFR (2-year lag) \\
+LD share & 1 & . & . & . & . & . & . & . & . & . & . & . & . & . & . & . \\
+Log GDP per capita & \num{-.429} & 1 & . & . & . & . & . & . & . & . & . & . & . & . & . & . \\
+GDP growth & \num{.121} & \num{-.122} & 1 & . & . & . & . & . & . & . & . & . & . & . & . & . \\
+Dependency ratio & \num{.198} & \num{-.553} & \num{.018} & 1 & . & . & . & . & . & . & . & . & . & . & . & . \\
+Urbanization rate & \num{-.327} & \num{.550} & \num{-.142} & \num{-.260} & 1 & . & . & . & . & . & . & . & . & . & . & . \\
+Trade openness & \num{-.161} & \num{.288} & \num{-.016} & \num{-.112} & \num{.082} & 1 & . & . & . & . & . & . & . & . & . & . \\
+FX rate perc. change & \num{.200} & \num{-.059} & \num{-.111} & \num{.046} & \num{-.066} & \num{-.063} & 1 & . & . & . & . & . & . & . & . & . \\
+Political rights & \num{-.047} & \num{.315} & \num{-.069} & \num{-.198} & \num{.125} & \num{.129} & \num{.116} & 1 & . & . & . & . & . & . & . & . \\
+Capital account openness & \num{.111} & \num{.190} & \num{.037} & \num{-.120} & \num{.184} & \num{.117} & \num{-.071} & \num{.201} & 1 & . & . & . & . & . & . & . \\
+Average inflation rate & \num{-.077} & \num{-.027} & \num{.048} & \num{.084} & \num{-.002} & \num{-.040} & \num{.121} & \num{-.055} & \num{-.058} & 1 & . & . & . & . & . & . \\
+War & \num{.009} & \num{-.087} & \num{-.049} & \num{.103} & \num{-.067} & \num{-.159} & \num{-.013} & \num{-.082} & \num{-.101} & \num{.043} & 1 & . & . & . & . & . \\
+Active IMF program & \num{.198} & \num{-.214} & \num{-.031} & \num{.178} & \num{.068} & \num{-.139} & \num{-.023} & \num{.057} & \num{.084} & \num{-.033} & \num{-.022} & 1 & . & . & . & . \\
+ODA & \num{.230} & \num{-.423} & \num{.005} & \num{.391} & \num{-.179} & \num{-.009} & \num{.038} & \num{.047} & \num{.011} & \num{.043} & \num{-.061} & \num{.226} & 1 & . & . & . \\
+Average interest rate & \num{-.268} & \num{.280} & \num{-.026} & \num{-.033} & \num{.250} & \num{-.028} & \num{.058} & \num{.089} & \num{.053} & \num{.097} & \num{.069} & \num{-.086} & \num{-.263} & 1 & . & . \\
+Hist. reliance on LD & \num{.745} & \num{-.352} & \num{.056} & \num{.195} & \num{-.259} & \num{-.039} & \num{.248} & \num{.046} & \num{.124} & \num{-.106} & \num{-.021} & \num{.122} & \num{.131} & \num{-.208} & 1 & . \\
+FFR (2-year lag) & \num{.223} & \num{-.213} & \num{-.000} & \num{.343} & \num{-.159} & \num{-.107} & \num{.104} & \num{-.027} & \num{-.027} & \num{.062} & \num{.072} & \num{.091} & \num{.194} & \num{.259} & \num{.029} & 1 \\
+\end{talltblr}
+\end{table}

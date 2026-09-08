@@ -1,0 +1,37 @@
+
+\begin{table}[htbp]
+   \caption{\label{tab:results_iv_time_breaks_other} Potential time breaks, middle-income countries}
+   \centering
+   \begin{tabular}{lcccccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variables: & \multicolumn{3}{c}{Health spending (share of GDP)} & \multicolumn{3}{c}{Education spending (share of GDP)}\\
+      Model:                                & (1)       & (2)       & (3)       & (4)      & (5)      & (6)\\  
+      \midrule
+      \emph{Variables}\\
+      LD share                              & -0.054    & 0.002     & -0.093    & -0.025   & 0.036    & -0.193\\   
+                                            & (0.057)   & (0.018)   & (0.147)   & (0.089)  & (0.068)  & (0.375)\\   
+      LD share after MDG                    & 0.073     &           &           & 0.061    &          &   \\   
+                                            & (0.061)   &           &           & (0.101)  &          &   \\   
+      LD share after SDG                    &           & 0.063     &           &          & 0.053    &   \\   
+                                            &           & (0.128)   &           &          & (0.286)  &   \\   
+      LD share after MDRI                   &           &           & 0.121     &          &          & 0.284\\   
+                                            &           &           & (0.168)   &          &          & (0.426)\\   
+      \midrule
+      \emph{Fixed-effects}\\
+      debtor\_country and year              & Yes       & Yes       & Yes       & Yes      & Yes      & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations                          & 1,880     & 1,880     & 1,880     & 1,472    & 1,472    & 1,472\\  
+      Adjusted R$^2$                        & 0.84946   & 0.84801   & 0.84811   & 0.75336  & 0.75414  & 0.75383\\  
+      BIC                                   & -13,264.7 & -12,621.5 & -12,190.7 & -8,681.5 & -8,189.3 & -7,244.5\\  
+      Wald (1st stage), LD share            & 10.696    & 8.8852    & 7.5614    & 9.5860   & 4.9300   & 5.2050\\  
+      Wald (1st stage), LD share after MDG  & 9.8187    &           &           & 7.9766   &          & \\  
+      Wald (1st stage), LD share after SDG  &           & 0.41508   &           &          & 0.46316  & \\  
+      Wald (1st stage), LD share after MDRI &           &           & 4.0514    &          &          & 3.3165\\  
+      \midrule \midrule
+      \multicolumn{7}{l}{\emph{Clustered (debtor\_country) standard-errors in parentheses}}\\
+      \multicolumn{7}{l}{\emph{Signif. Codes: ***: 0.001, **: 0.01, *: 0.05, +: 0.1}}\\
+   \end{tabular}
+\end{table}
+
+

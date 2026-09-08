@@ -1,0 +1,31 @@
+
+\begin{table}[htbp]
+   \caption{\label{tab:results_baseline_iv_overall_prvt_cred_other} IV results for private creditor share, middle-income countries}
+   \centering
+   \begin{tabular}{lcc}
+      \tabularnewline \midrule \midrule
+      Dependent Variables:                     & Health spending (share of GDP) & Education spending (share of GDP)\\  
+      Model:                                   & (1)                            & (2)\\  
+      \midrule
+      \emph{Variables}\\
+      Private creditor share                   & -0.026                         & -0.054\\   
+                                               & (0.019)                        & (0.044)\\   
+        & AR F-Statistic & 1.62 & 2.7\\
+         & AR p-value & 0.203 & 0.1\\
+          & AR Robust 95\% CI & [-0.0707, 0.0194] & [-0.2960, 0.0081]\\
+      \midrule
+      \emph{Fixed-effects}\\
+      debtor\_country and year                 & Yes                            & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations                             & 1,748                          & 1,379\\  
+      Adjusted R$^2$                           & 0.85503                        & 0.76055\\  
+      BIC                                      & -12,342.3                      & -7,915.9\\  
+      Wald (1st stage), Private creditor share & 11.031                         & 7.0832\\  
+      \midrule \midrule
+      \multicolumn{3}{l}{\emph{Clustered (debtor\_country) standard-errors in parentheses}}\\
+      \multicolumn{3}{l}{\emph{Signif. Codes: ***: 0.001, **: 0.01, *: 0.05, +: 0.1}}\\
+   \end{tabular}
+\end{table}
+
+

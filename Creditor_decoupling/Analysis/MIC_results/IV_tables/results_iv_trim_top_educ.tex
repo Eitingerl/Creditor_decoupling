@@ -1,0 +1,32 @@
+
+\begin{table}[htbp]
+   \caption{\label{tab:results_iv_trim_top_educ_} IV results without extreme instrument values, education spending, }
+   \centering
+   \begin{tabular}{lcccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variable: & \multicolumn{4}{c}{Education spending (share of GDP)}\\
+                                 & Baseline & Trim top 1\%  & Trim top 5\%  & Trim top 10\% \\    
+      Model:                     & (1)      & (2)           & (3)           & (4)\\  
+      \midrule
+      \emph{Variables}\\
+      LD share                   & 0.025    & 0.026         & 0.024         & 0.030\\   
+                                 & (0.020)  & (0.020)       & (0.016)       & (0.020)\\   
+      \midrule
+      \emph{Fixed-effects}\\
+      debtor\_country and year   & Yes      & Yes           &               & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations               & 1,472    & 1,466         & 1,425         & 1,405\\  
+      Adjusted R$^2$             & 0.75359  & 0.75379       & 0.18452       & 0.75333\\  
+      BIC                        & -8,860.9 & -8,828.1      & -7,687.4      & -8,432.5\\  
+      Wald (1st stage), LD share & 17.908   & 19.211        & 37.804        & 19.499\\  
+      \midrule \midrule
+      \multicolumn{5}{l}{\emph{Clustered (debtor\_country) standard-errors in parentheses}}\\
+      \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.001, **: 0.01, *: 0.05, +: 0.1}}\\
+   \end{tabular}
+   
+   \par \raggedright 
+   Country-clustered standard errors are in parentheses. Stars indicate significance at *** $p < 0.001$; ** $p < 0.01$; * $p < 0.05$; and + $p < 0.1$.
+\end{table}
+
+

@@ -1,0 +1,33 @@
+
+\begin{table}[htbp]
+   \caption{\label{tab:results_iv_alt_share_other} IV results with different specifications of the share part of the IV, middle-income countries}
+   \centering
+   \begin{tabular}{lcccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variables: & \multicolumn{2}{c}{Health spending (share of GDP)} & \multicolumn{2}{c}{Education spending (share of GDP)}\\
+      Model:                           & (1)       & (2)       & (3)      & (4)\\  
+      \midrule
+      \emph{Variables}\\
+      LD share                         & -0.003    & -0.005    & 0.068    & 0.064\\   
+                                       & (0.033)   & (0.027)   & (0.064)  & (0.043)\\   
+      Avg. reliance on LD, recent past &           & 0.008     &          & -0.053\\   
+                                       &           & (0.023)   &          & (0.036)\\   
+        & AR F-Statistic & 0.01 & - & 3.72 & -\\
+         & AR p-value & 0.94 & - & 0.054 & -\\
+          & AR Robust 95\% CI & [-0.0774, 0.0585] & - & [-0.0005, 0.4347] & -\\
+      \midrule
+      \emph{Fixed-effects}\\
+      debtor\_country and year         & Yes       & Yes       & Yes      & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations                     & 1,880     & 1,880     & 1,472    & 1,472\\  
+      Adjusted R$^2$                   & 0.84809   & 0.84941   & 0.75480  & 0.75398\\  
+      BIC                              & -13,450.1 & -13,476.4 & -8,024.1 & -8,554.6\\  
+      Wald (1st stage), LD share       & 1.9362    & 12.771    & 2.6382   & 13.783\\  
+      \midrule \midrule
+      \multicolumn{5}{l}{\emph{Clustered (debtor\_country) standard-errors in parentheses}}\\
+      \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.001, **: 0.01, *: 0.05, +: 0.1}}\\
+   \end{tabular}
+\end{table}
+
+
