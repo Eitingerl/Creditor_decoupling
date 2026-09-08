@@ -459,7 +459,7 @@ ggplot(hist_data_h, aes(x = coefs_h)) +
   theme_minimal() +
   theme(text = element_text(size = 20)) +
   labs(x = "Coefficient on instrument", y = "Frequency")
-ggsave("Figures/iv_shuffle_health.png", width = 10, height = 8)
+ggsave("Analysis/MIC_results/Figures/iv_shuffle_health.png", width = 10, height = 8)
 
 ggplot(hist_data_e, aes(x = coefs_e)) +
   geom_density(alpha = 0.7, color = "darkblue") +
@@ -467,7 +467,7 @@ ggplot(hist_data_e, aes(x = coefs_e)) +
   theme_minimal() +
   theme(text = element_text(size = 20)) +
   labs(x = "Coefficient on instrument", y = "Frequency")
-ggsave("Figures/iv_shuffle_educ.png", width = 10, height = 8)
+ggsave("Analysis/MIC_results/Figures/iv_shuffle_educ.png", width = 10, height = 8)
 
 
 ################################################################################
