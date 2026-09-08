@@ -492,7 +492,7 @@ wide_controls_data <- wide_controls_data %>%
   rename(debtor_country = debtorCountry,
   ext_debt_perc_gni = DT.DOD.DECT.GN.ZS) # clarify column names
 
-write_xlsx(wide_controls_data, "Construct_dataset/PC_MDBs_only/controls_data_dac_pc_MDBs.xlsx")
+write_xlsx(wide_controls_data, "Construct_dataset/PC_MDBs_only/controls_data_pc_MDBs.xlsx")
 
 
 ################################################################################
@@ -655,7 +655,7 @@ fx_rate_df <- fx_rate_df %>%
   fx_rate = OBS_VALUE)
 
 # Government balance
-gov_bal_df <- read_csv("Construct_dataset/Downloaded_data/IMF_gov_balance+debt_to_gdp.csv")
+gov_bal_df <- read_csv("Construct_dataset/Downloaded_data/IMF_gov_balance_debt_to_gdp.csv")
 
 gov_bal_df <- gov_bal_df %>%
   group_by(COUNTRY) %>%
@@ -675,7 +675,7 @@ gov_bal_df_wide <- gov_bal_df_wide %>%
   debt_perc_gdp = `Gross debt, General government, Percent of GDP`)
 
 # Inflation and current account balance
-infl_curr_acc <- read_csv("Construct_dataset/Downloaded_data/IMF_inflation+curr_acc_bal.csv")
+infl_curr_acc <- read_csv("Construct_dataset/Downloaded_data/IMF_inflation_curr_acc_bal.csv")
 
 infl_curr_acc_df <- infl_curr_acc %>%
   group_by(COUNTRY.ID) %>%
