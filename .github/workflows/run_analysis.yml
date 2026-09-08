@@ -32,7 +32,7 @@ jobs:
             "AER", "stargazer", "naniar", "nortest", "slider", "countrycode",
             "psych", "psychTools", "xtable", "modelsummary", "ivDiag",
             "factoextra", "NbClust", "compositions", "strucchange",
-            "mediation", "multilevel", "bda"
+            "mediation", "multilevel", "bda", "maps"
           )
           install.packages(pkgs)
         shell: Rscript {0}
