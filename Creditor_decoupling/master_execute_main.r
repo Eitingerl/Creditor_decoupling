@@ -134,9 +134,7 @@ data_df <- data_df %>%
     owid_educ_exp_perc_gdp_lag1 = dplyr::lag(owid_educ_exp_perc_gdp, 1),
     share_trad_cred_lag1 = dplyr::lag(share_trad_cred, 1),
     share_trad_cred_lag2 = dplyr::lag(share_trad_cred, 2), # for mediation analysis
-    #share_trad_cred_lag3 = dplyr::lag(share_trad_cred, 3),
     share_trad_cred_lag4 = dplyr::lag(share_trad_cred, 4),
-    #share_trad_cred_lag5 = dplyr::lag(share_trad_cred, 5), # for 5-year lag
     share_prvt_cred_lag1 = dplyr::lag(share_prvt_cred, 1),
     share_new_off_cred_lag1 = dplyr::lag(share_new_off_cred, 1),
     share_trad_cred_commit_lag1 = dplyr::lag(share_trad_cred_commit, 1),
@@ -153,7 +151,6 @@ data_df <- data_df %>%
     cap_acc_openness_lag1 = dplyr::lag(cap_acc_openness, 1),
     imf_active_lag1 = as.factor(dplyr::lag(imf_active, 1)),
     gdp_growth_lag1 = dplyr::lag(gdp_growth, 1),
-    #us_int_rate_lag1 = dplyr::lag(us_int_rate, 1),
     us_int_rate_lag2 = dplyr::lag(us_int_rate, 2),
     us_int_rate_lag3 = dplyr::lag(us_int_rate, 3),
     us_int_rate_lag5 = dplyr::lag(us_int_rate, 5),
@@ -231,19 +228,14 @@ data_df <- data_df %>%
   # Create IV interaction term
   mutate(
     iv_interaction = share_trad_cred_run_avg_lag2*us_int_rate_lag2,
-    #iv_interaction_sq = I(iv_interaction*iv_interaction),
-    #iv_log_interaction = I(log(share_trad_cred_run_avg_lag2 + 0.00000000000001)*
-    #                         us_int_rate_lag2),
     iv_invar_share_interaction = I(share_trad_cred_avg*us_int_rate_lag2),
     iv_interaction_prvt = I(share_prvt_cred_run_avg_lag2*us_int_rate_lag2),
     iv_interaction_commit = share_trad_crd_com_run_avg_lag2*us_int_rate_lag2
   ) %>%
   
-  # Create interaction terms for AR tests in robustness checks
+  # Create interaction terms for robustness check in Stata
   mutate(
-    share_trad_cred_lag1_sq = I(share_trad_cred_lag1*share_trad_cred_lag1)#,
-    #log_share_trad_cred_run_avg_lag2 = 
-    #  log(share_trad_cred_run_avg_lag2 + 0.00000000000001)
+    share_trad_cred_lag1_sq = I(share_trad_cred_lag1*share_trad_cred_lag1)
   ) %>%
   ungroup()
 
