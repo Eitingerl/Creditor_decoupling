@@ -1186,9 +1186,8 @@ etable(est_iv1.1, est_1perc_health, est_5perc_health, est_10perc_health,
        dict = c("ihme_health_exp_gdp" = "Health spending (share of GDP)",
                 "share_trad_cred_lag1" = "LD share"),
        tex = TRUE,
-       title = "IV results without extreme instrument values, health spending, ",
-       label = "tab:results_iv_trim_top_health_",
-       notes = "Country-clustered standard errors are in parentheses. Stars indicate significance at *** $p < 0.001$; ** $p < 0.01$; * $p < 0.05$; and + $p < 0.1$.",
+       title = "IV results without extreme instrument values, health spending, middle-income countries",
+       label = "tab:results_iv_trim_top_health_other",
        file = "Analysis/MIC_results/IV_tables/results_iv_trim_top_health.tex", 
        replace = TRUE)
 
@@ -1201,9 +1200,8 @@ etable(est_iv2.1, est_1perc_educ, est_5perc_educ, est_10perc_educ,
        dict = c("owid_educ_exp_perc_gdp" = "Education spending (share of GDP)",
                 "share_trad_cred_lag1" = "LD share"),
        tex = TRUE,
-       title = "IV results without extreme instrument values, education spending, ",
-       label = "tab:results_iv_trim_top_educ_",
-       notes = "Country-clustered standard errors are in parentheses. Stars indicate significance at *** $p < 0.001$; ** $p < 0.01$; * $p < 0.05$; and + $p < 0.1$.",
+       title = "IV results without extreme instrument values, education spending, middle-income countries",
+       label = "tab:results_iv_trim_top_educ_other",
        file = "Analysis/MIC_results/IV_tables/results_iv_trim_top_educ.tex", 
        replace = TRUE)
 

@@ -313,7 +313,7 @@ mic_stata <- data_df_mic %>%
   dplyr::select(-c(`Country Code`, `Country Name`)) %>%
   write_dta("Analysis/data_mic.dta")
 
-# create data set with only upper-middle-income countries
+# create data set with only upper-middle-income countries - for robustness check
 data_df_umic <- data_df %>%
   group_by(debtor_country) %>%
   mutate(
@@ -332,14 +332,14 @@ source("Analysis/Code/pre-analysis_overall.R") # data exploration and visualizat
 
 ################################## LICs first ##################################
 data_df <- data_df_lic
-source("Analysis/Code/pre-analysis_lics.R")
+source("Analysis/Code/pre-analysis_lics.R") # sample-specific figures and correlation tables
 
 data_df_plm <- pdata.frame(data_df_lic, index = c("debtor_country", "year"))
 
 source("Analysis/Code/summary_stats_lics.R") # summary statistics table
 
-source("Analysis/Code/iv_reg_lics.R") 
-source("Analysis/Code/mediation_lics.R") 
+source("Analysis/Code/iv_reg_lics.R") # baseline IV regression
+source("Analysis/Code/mediation_lics.R") # mediation analysis
 
 
 ################################### Now MICs ###################################
@@ -351,6 +351,6 @@ data_df_plm <- pdata.frame(data_df_mic, index = c("debtor_country", "year"))
 source("Analysis/Code/summary_stats_mics.R") 
 
 source("Analysis/Code/iv_reg_mics.R") 
-source("Analysis/Code/robustness.R") 
-source("Analysis/Code/iv_reg_diff_def_legacy_cred.r")
+source("Analysis/Code/robustness.R") # robustness checks for IV model - only done for middle-income countries
+source("Analysis/Code/iv_reg_diff_def_legacy_cred.r") # further robustness checks using different datasets
 source("Analysis/Code/mediation_mics.R") 
