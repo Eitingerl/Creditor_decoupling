@@ -1,6 +1,7 @@
 ################################################################################
 ####################### Tables D.2-5: Summary statistics #######################
 ################################################################################
+dir.create("Analysis/LIC_results/General_tables", recursive = TRUE, showWarnings = FALSE)
 
 all_vars_h <- c("ihme_health_exp_gdp",  
                 "share_trad_cred_lag1", "share_prvt_cred_lag1","log_gdp_pc_lag1", 

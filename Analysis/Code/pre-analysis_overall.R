@@ -1,6 +1,7 @@
 ################################################################################
 ######################## Figure A.I: Evolution of debt #########################
 ################################################################################
+dir.create("Analysis/General_figures", recursive = TRUE, showWarnings = FALSE)
 
 # Total external debt 
 ids_totals <- read_excel("Construct_dataset/Downloaded_data/IDS_totals_w_China.xlsx", range = cell_rows(1:9), 

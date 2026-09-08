@@ -1,6 +1,7 @@
 ################################################################################
 ################ Tables 1 and 2, B.1: Baseline IV specification ################
 ################################################################################
+dir.create("Analysis/MIC_results/IV_tables", recursive = TRUE, showWarnings = FALSE)
 
 ############################## Health expenditure ##############################
 ### Full set of controls
@@ -147,18 +148,24 @@ ar_results_rest_ctrl_educ <- AR_test( # Anderson-Rubin test for full controls
 )
 
 ar_custom_rows <- list(
-  c("AR F-Statistic", round(ar_results_full_ctrl_health$Fstat["F"], 2),
+  "AR F-Statistic" = c(
+    round(ar_results_full_ctrl_health$Fstat["F"], 2),
     round(ar_results_rest_ctrl_health$Fstat["F"], 2), 
     round(ar_results_full_ctrl_educ$Fstat["F"], 2),
-    round(ar_results_rest_ctrl_educ$Fstat["F"], 2)),
-  c("AR p-value", round(ar_results_full_ctrl_health$Fstat["p"], 3),
+    round(ar_results_rest_ctrl_educ$Fstat["F"], 2)
+  ),
+  "AR p-value" = c(
+    round(ar_results_full_ctrl_health$Fstat["p"], 3),
     round(ar_results_rest_ctrl_health$Fstat["p"], 3), 
     round(ar_results_full_ctrl_educ$Fstat["p"], 3),
-    round(ar_results_rest_ctrl_educ$Fstat["p"], 3)),
-  c("AR Robust 95% CI", ar_results_full_ctrl_health$ci.print,
+    round(ar_results_rest_ctrl_educ$Fstat["p"], 3)
+  ),
+  "AR Robust 95% CI" = c(
+    ar_results_full_ctrl_health$ci.print,
     ar_results_rest_ctrl_health$ci.print, 
     ar_results_full_ctrl_educ$ci.print,
-    ar_results_rest_ctrl_educ$ci.print)
+    ar_results_rest_ctrl_educ$ci.print
+  )
 )
 
 # For Tables 1 and 2
@@ -280,24 +287,30 @@ ar_results_med_educ <- AR_test( # Anderson-Rubin test for restricted controls
 )
 
 ar_app_custom_row <- list(
-  c("AR F-Statistic", round(ar_results_full_ctrl_health$Fstat["F"], 2),
+  "AR F-Statistic" = c(
+    round(ar_results_full_ctrl_health$Fstat["F"], 2),
     round(ar_results_rest_ctrl_health$Fstat["F"], 2), 
     round(ar_results_med_health$Fstat["F"], 2), 
     round(ar_results_full_ctrl_educ$Fstat["F"], 2),
     round(ar_results_rest_ctrl_educ$Fstat["F"], 2),
-    round(ar_results_med_educ$Fstat["F"], 2)),
-  c("AR p-value", round(ar_results_full_ctrl_health$Fstat["p"], 3),
+    round(ar_results_med_educ$Fstat["F"], 2)
+  ),
+  "AR p-value" = c(
+    round(ar_results_full_ctrl_health$Fstat["p"], 3),
     round(ar_results_rest_ctrl_health$Fstat["p"], 3),
     round(ar_results_med_health$Fstat["p"], 3),
     round(ar_results_full_ctrl_educ$Fstat["p"], 3),
     round(ar_results_rest_ctrl_educ$Fstat["p"], 3),
-    round(ar_results_med_educ$Fstat["p"], 3)),
-  c("AR Robust 95% CI", ar_results_full_ctrl_health$ci.print,
+    round(ar_results_med_educ$Fstat["p"], 3)
+  ),
+  "AR Robust 95% CI" = c(
+    ar_results_full_ctrl_health$ci.print,
     ar_results_rest_ctrl_health$ci.print, 
     ar_results_med_health$ci.print, 
     ar_results_full_ctrl_educ$ci.print,
     ar_results_rest_ctrl_educ$ci.print,
-    ar_results_med_educ$ci.print)
+    ar_results_med_educ$ci.print
+  )
 )
 
 etable(est_iv1.1, est_iv1.2, est_iv1.3, est_iv2.1, est_iv2.2, est_iv2.3,

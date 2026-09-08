@@ -1,6 +1,8 @@
 ################################################################################
 ############ Figure A.IV: IV vs. explanatory and outcome variables #############
 ################################################################################
+dir.create("Analysis/MIC_results/General_tables", recursive = TRUE, showWarnings = FALSE)
+dir.create("Analysis/MIC_results/Figures", recursive = TRUE, showWarnings = FALSE)
 
 data_df_iv <- data_df %>%
   group_by(year) %>%

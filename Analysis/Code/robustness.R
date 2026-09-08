@@ -289,12 +289,18 @@ ar_prvt_educ <- AR_test(
 )
 
 ar_prvt_custom_rows <- list(
-  c("AR F-Statistic", round(ar_prvt_health$Fstat["F"], 2),
-    round(ar_prvt_educ$Fstat["F"], 2)),
-  c("AR p-value", round(ar_prvt_health$Fstat["p"], 3),
-    round(ar_prvt_educ$Fstat["p"], 3)),
-  c("AR Robust 95% CI", ar_prvt_health$ci.print,
-    ar_prvt_educ$ci.print)
+  "AR F-Statistic" = c(
+    round(ar_prvt_health$Fstat["F"], 2),
+    round(ar_prvt_educ$Fstat["F"], 2)
+  ),
+  "AR p-value" = c(
+    round(ar_prvt_health$Fstat["p"], 3),
+    round(ar_prvt_educ$Fstat["p"], 3)
+  ),
+  "AR Robust 95% CI" = c(
+    ar_prvt_health$ci.print,
+    ar_prvt_educ$ci.print
+  )
 )
 
 etable(est_iv1.8, est_iv2.8, 
@@ -895,12 +901,24 @@ est_iv2.16 = feols(owid_educ_exp_perc_gdp ~
                    panel.id = ~debtor_country + year, cluster = ~debtor_country)
 
 ar_custom_rows_invar_share <- list(
-  c("AR F-Statistic", round(ar_rob_invar_share_health$Fstat["F"], 2), "-",
-    round(ar_rob_invar_share_educ$Fstat["F"], 2), "-"),
-  c("AR p-value", round(ar_rob_invar_share_health$Fstat["p"], 3), "-",
-    round(ar_rob_invar_share_educ$Fstat["p"], 3), "-"),
-  c("AR Robust 95% CI", ar_rob_invar_share_health$ci.print, "-",
-    ar_rob_invar_share_educ$ci.print, "-")
+  "AR F-Statistic" = c(
+    round(ar_rob_invar_share_health$Fstat["F"], 2), 
+    "-",
+    round(ar_rob_invar_share_educ$Fstat["F"], 2), 
+    "-"
+  ),
+  "AR p-value" = c(
+    round(ar_rob_invar_share_health$Fstat["p"], 3), 
+    "-",
+    round(ar_rob_invar_share_educ$Fstat["p"], 3), 
+    "-"
+  ),
+  "AR Robust 95% CI" = c(
+    ar_rob_invar_share_health$ci.print, 
+    "-",
+    ar_rob_invar_share_educ$ci.print, 
+    "-"
+  )
 )
 
 etable(est_iv1.15, est_iv1.16, est_iv2.15, est_iv2.16,

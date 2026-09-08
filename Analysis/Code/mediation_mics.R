@@ -1,6 +1,8 @@
 ################################################################################
 ######################### Table 3: Mediation analysis ##########################
 ################################################################################
+dir.create("Analysis/MIC_results/Mediation_tables", recursive = TRUE, showWarnings = FALSE)
+
 data_df_plm$imf_active_lag1 <- as.numeric(as.character(data_df_plm$imf_active_lag1))
 
 # Set up the Wild Cluster Bootstrap Function
