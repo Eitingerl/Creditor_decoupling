@@ -356,5 +356,5 @@ source("Analysis/Code/summary_stats.R")
 
 source("Analysis/Code/iv_reg.R") 
 source("Analysis/Code/robustness.R") 
-source("Analysis/Code/iv_reg_diff_def_legacy_cred.R")
+source("Analysis/Code/iv_reg_diff_def_legacy_cred.r")
 source("Analysis/Code/mediation.R") 
