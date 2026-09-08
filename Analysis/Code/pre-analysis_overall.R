@@ -3,7 +3,7 @@
 ################################################################################
 
 # Total external debt 
-ids_totals <- read_excel("/Users/lisaeitinger/Desktop/BC/Sovereign_debt/GitHub_clean/Construct_dataset/Downloaded_data/IDS_totals_w_China.xlsx", range = cell_rows(1:9), 
+ids_totals <- read_excel("Construct_dataset/Downloaded_data/IDS_totals_w_China.xlsx", range = cell_rows(1:9), 
                          na = c("", ".."))
 
 ids_totals <- ids_totals %>%
@@ -38,7 +38,7 @@ ggplot(wide_ids, aes(x=year, y=debt_wo_China, fill=creditor_type)) +
   scale_fill_manual(values = c("darkgray", "orange", "blue", "red")) +
   theme_minimal(base_size = 22) +
   theme(text = element_text(size = 22))
-ggsave("General_figures/ids_debt_totals_wo_chn.png", width = 10, height = 8)
+ggsave("Analysis/General_figures/ids_debt_totals_wo_chn.png", width = 10, height = 8)
 
 # Now by creditor type shares 
 wide_ids_total_test <- wide_ids %>%
@@ -61,7 +61,7 @@ ggplot(wide_ids_total_test, aes(x=year, y=percentage_wo_chn, fill=creditor_type)
   scale_fill_manual(values = c("darkgray", "orange", "blue", "red")) +
   theme_minimal(base_size = 22) +
   theme(text = element_text(size = 22))
-ggsave("General_figures/ids_debt_shares_wo_chn.png", width = 10, height = 8)
+ggsave("Analysis/General_figures/ids_debt_shares_wo_chn.png", width = 10, height = 8)
 
 
 ################################################################################
@@ -107,7 +107,7 @@ ggplot(map_comb_95, aes(x = long, y = lat, fill = debtor_country,
         legend.key.height = unit(0.5, "cm"),
         aspect.ratio = 1/2,
         text = element_text(size = 18))
-ggsave("General_figures/map_share_trad_cred_1995.png", width = 12, height = 8)
+ggsave("Analysis/General_figures/map_share_trad_cred_1995.png", width = 12, height = 8)
 
 ggplot(map_comb_22, aes(x = long, y = lat, fill = debtor_country, 
                         group = group)) +
@@ -121,7 +121,7 @@ ggplot(map_comb_22, aes(x = long, y = lat, fill = debtor_country,
         legend.key.height = unit(0.5, "cm"),
         aspect.ratio = 1/2,
         text = element_text(size = 18))
-ggsave("General_figures/map_share_trad_cred_2022.png", width = 12, height = 8)
+ggsave("Analysis/General_figures/map_share_trad_cred_2022.png", width = 12, height = 8)
 
 # Figure A.II
 ggplot(map_comb_95, aes(x = long, y = lat, fill = debtor_country, 
@@ -136,7 +136,7 @@ ggplot(map_comb_95, aes(x = long, y = lat, fill = debtor_country,
         legend.key.height = unit(0.5, "cm"),
         aspect.ratio = 1/2,
         text = element_text(size = 18))
-ggsave("General_figures/map_health_exp_1995.png", width = 12, height = 8)
+ggsave("Analysis/General_figures/map_health_exp_1995.png", width = 12, height = 8)
 
 ggplot(map_comb_22, aes(x = long, y = lat, fill = debtor_country, 
                         group = group)) +
@@ -150,7 +150,7 @@ ggplot(map_comb_22, aes(x = long, y = lat, fill = debtor_country,
         legend.key.height = unit(0.5, "cm"),
         aspect.ratio = 1/2,
         text = element_text(size = 18))
-ggsave("General_figures/map_health_exp_2022.png", width = 12, height = 8)
+ggsave("Analysis/General_figures/map_health_exp_2022.png", width = 12, height = 8)
 
 # Figure A.III
 ggplot(map_comb_95, aes(x = long, y = lat, fill = debtor_country, 
@@ -165,7 +165,7 @@ ggplot(map_comb_95, aes(x = long, y = lat, fill = debtor_country,
         legend.key.height = unit(0.5, "cm"),
         aspect.ratio = 1/2,
         text = element_text(size = 18))
-ggsave("General_figures/map_educ_exp_1995.png", width = 12, height = 8)
+ggsave("Analysis/General_figures/map_educ_exp_1995.png", width = 12, height = 8)
 
 ggplot(map_comb_22, aes(x = long, y = lat, fill = debtor_country, 
                         group = group)) +
@@ -179,5 +179,5 @@ ggplot(map_comb_22, aes(x = long, y = lat, fill = debtor_country,
         legend.key.height = unit(0.5, "cm"),
         aspect.ratio = 1/2,
         text = element_text(size = 18))
-ggsave("General_figures/map_educ_exp_2022.png", width = 12, height = 8)
+ggsave("Analysis/General_figures/map_educ_exp_2022.png", width = 12, height = 8)
 
