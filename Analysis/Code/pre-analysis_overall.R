@@ -71,10 +71,8 @@ ggsave("Analysis/General_figures/ids_debt_shares_wo_chn.png", width = 10, height
 world_coordinates <- map_data("world") %>%
   filter(region != "Antarctica")
 
-debtor_country <- countrycode(world_coordinates$region, 
-                         "country.name", "iso3c") # get ISO-3 country codes
-
-world_map <- cbind(world_coordinates, debtor_country)
+world_map <- world_coordinates %>%
+  mutate(debtor_country = countrycode(region, "country.name", "iso3c")) # get ISO-3 country codes
 
 data_df_95 <- data_df %>% # for year 1995 - health and educ exp. too patchy then
   filter(year == 1995) %>%
