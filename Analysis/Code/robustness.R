@@ -632,8 +632,7 @@ etable(est_iv1.10, est_iv1.11, est_iv2.10, est_iv2.11,
        depvar = FALSE, 
        headers = list(
          "Dependent Variables:" = c("Log(Health exp.", "Health exp.", "Log(Education exp.", "Education exp."),
-         " " = c("p.c., PPP)", "(share of GDP)", "p.c., PPP)", "(share of GDP)"),
-         ),
+         " " = c("p.c., PPP)", "(share of GDP)", "p.c., PPP)", "(share of GDP)")),
        dict = c("ihme_health_exp_gdp" = "Health spending (share of GDP)",
                 "log(ihme_health_exp_pc_ppp+0.0000001)" = 
                   "Log(Health spending p.c., PPP)",
