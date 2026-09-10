@@ -79,18 +79,13 @@ data_df_95 <- data_df %>% # for year 1995 - health and educ exp. too patchy then
   dplyr::select(debtor_country, ihme_health_exp_gdp, owid_educ_exp_perc_gdp,
          share_trad_cred) 
 
-data_df_00 <- data_df %>% # for year 2000
-  filter(year == 2000) %>%
-  dplyr::select(debtor_country, ihme_health_exp_gdp, owid_educ_exp_perc_gdp) 
-
-data_df_22 <- data_df %>% # for year 2022
-  filter(year == 2022) %>%
+data_df_23 <- data_df %>% # for year 2022
+  filter(year == 2023) %>%
   dplyr::select(debtor_country, ihme_health_exp_gdp, owid_educ_exp_perc_gdp, 
          share_trad_cred)
 
 map_comb_95 <- left_join(world_map, data_df_95, by = "debtor_country")
-map_comb_00 <- left_join(world_map, data_df_00, by = "debtor_country")
-map_comb_22 <- left_join(world_map, data_df_22, by = "debtor_country")
+map_comb_23 <- left_join(world_map, data_df_23, by = "debtor_country")
 
 
 # Figure 1
@@ -108,19 +103,19 @@ ggplot(map_comb_95, aes(x = long, y = lat, fill = debtor_country,
         text = element_text(size = 18))
 ggsave("Analysis/General_figures/map_share_trad_cred_1995.png", width = 12, height = 8)
 
-ggplot(map_comb_22, aes(x = long, y = lat, fill = debtor_country, 
+ggplot(map_comb_23, aes(x = long, y = lat, fill = debtor_country, 
                         group = group)) +
   geom_polygon(aes(fill = share_trad_cred), color = "white") +
   scale_fill_viridis_c(option = "plasma", na.value = "grey90", direction = -1,
                        breaks = c(0.25, 0.50, 0.75)) +
-  labs(fill = "Legacy debt share in 2022") +
+  labs(fill = "Legacy debt share in 2023") +
   theme_void() +
   theme(legend.position = "bottom",
         legend.key.width = unit(2, "cm"), 
         legend.key.height = unit(0.5, "cm"),
         aspect.ratio = 1/2,
         text = element_text(size = 18))
-ggsave("Analysis/General_figures/map_share_trad_cred_2022.png", width = 12, height = 8)
+ggsave("Analysis/General_figures/map_share_trad_cred_2023.png", width = 12, height = 8)
 
 # Figure A.II
 ggplot(map_comb_95, aes(x = long, y = lat, fill = debtor_country, 
@@ -137,19 +132,19 @@ ggplot(map_comb_95, aes(x = long, y = lat, fill = debtor_country,
         text = element_text(size = 18))
 ggsave("Analysis/General_figures/map_health_exp_1995.png", width = 12, height = 8)
 
-ggplot(map_comb_22, aes(x = long, y = lat, fill = debtor_country, 
+ggplot(map_comb_23, aes(x = long, y = lat, fill = debtor_country, 
                         group = group)) +
   geom_polygon(aes(fill = ihme_health_exp_gdp), color = "white") +
   scale_fill_viridis_c(option = "plasma", na.value = "grey90", direction = -1,
                        breaks = c(0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08)) +
-  labs(fill = "Government health exp. (share of GDP) in 2022") +
+  labs(fill = "Government health exp. (share of GDP) in 2023") +
   theme_void() +
   theme(legend.position = "bottom",
         legend.key.width = unit(2, "cm"), 
         legend.key.height = unit(0.5, "cm"),
         aspect.ratio = 1/2,
         text = element_text(size = 18))
-ggsave("Analysis/General_figures/map_health_exp_2022.png", width = 12, height = 8)
+ggsave("Analysis/General_figures/map_health_exp_2023.png", width = 12, height = 8)
 
 # Figure A.III
 ggplot(map_comb_95, aes(x = long, y = lat, fill = debtor_country, 
@@ -166,17 +161,17 @@ ggplot(map_comb_95, aes(x = long, y = lat, fill = debtor_country,
         text = element_text(size = 18))
 ggsave("Analysis/General_figures/map_educ_exp_1995.png", width = 12, height = 8)
 
-ggplot(map_comb_22, aes(x = long, y = lat, fill = debtor_country, 
+ggplot(map_comb_23, aes(x = long, y = lat, fill = debtor_country, 
                         group = group)) +
   geom_polygon(aes(fill = owid_educ_exp_perc_gdp), color = "white") +
   scale_fill_viridis_c(option = "plasma", na.value = "grey90", direction = -1,
                        breaks = c(0.02, 0.04, 0.06, 0.08, 0.1)) +
-  labs(fill = "Government education exp. (share of GDP) in 2022") +
+  labs(fill = "Government education exp. (share of GDP) in 2023") +
   theme_void() +
   theme(legend.position = "bottom",
         legend.key.width = unit(2, "cm"), 
         legend.key.height = unit(0.5, "cm"),
         aspect.ratio = 1/2,
         text = element_text(size = 18))
-ggsave("Analysis/General_figures/map_educ_exp_2022.png", width = 12, height = 8)
+ggsave("Analysis/General_figures/map_educ_exp_2023.png", width = 12, height = 8)
 

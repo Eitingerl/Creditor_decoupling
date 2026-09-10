@@ -237,7 +237,7 @@ wide_final_data_ppg_debt_total <- wide_total_data %>%
          total_disburse_ppg = DT.DIS.DPPG.CD)
 
 # Write as Excel file
-write_xlsx(wide_final_data_ppg_debt_total, "Construct_dataset/Main/final_data_ppg_debt_total_dac.xlsx") 
+write_xlsx(wide_final_data_ppg_debt_total, "Construct_dataset/Main/final_data_ppg_debt_total.xlsx") 
 
 # Calculate the sum of the debt held by different creditor types
 wide_final_data_ppg_debt_total <- wide_final_data_ppg_debt_total %>%
@@ -517,7 +517,7 @@ wide_controls_data <- wide_controls_data %>%
   rename(debtor_country = debtorCountry,
   ext_debt_perc_gni = DT.DOD.DECT.GN.ZS) # clarify column names
 
-write_xlsx(wide_controls_data, "Construct_dataset/Main/controls_data_dac.xlsx")
+write_xlsx(wide_controls_data, "Construct_dataset/Main/controls_data.xlsx")
 
 
 ################################################################################
@@ -529,7 +529,7 @@ df_debt <- wide_final_data_ppg_debt_total %>%
   full_join(wide_loan_terms_data, by = c("year", "debtor_country")) #%>%
   #full_join(wide_controls_data_full, by = c("year", "debtor_country")) 
 
-write_xlsx(df_debt, "Construct_dataset/Main/debt_data_dac.xlsx")                    
+write_xlsx(df_debt, "Construct_dataset/Main/debt_data.xlsx")                    
 
 
 ################################################################################
@@ -570,7 +570,7 @@ dev_ind_data <- dev_ind_data %>%
   total_pop = SP.POP.TOTL,
   mil_exp = MS.MIL.XPND.GD.ZS)
 
-write_xlsx(dev_ind_data, "Construct_dataset/Main/dev_ind_data_dac.xlsx")
+write_xlsx(dev_ind_data, "Construct_dataset/Main/dev_ind_data.xlsx")
 
 
 ################################################################################
@@ -578,7 +578,7 @@ write_xlsx(dev_ind_data, "Construct_dataset/Main/dev_ind_data_dac.xlsx")
 ################################################################################
 
 ############################### 11.1: IHME data ################################
-health_spend_df <- read_csv("Construct_dataset/Downloaded_data/IHME_health_spending_data.csv") # covers more years than WB
+health_spend_df <- read_csv("Construct_dataset/Downloaded_data/ihme_health_spending_95-23_data.CSV") # covers more years than WB
 
 health_spend_df <- health_spend_df %>%
   select(c(location_id, iso3, year, 

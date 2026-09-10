@@ -553,7 +553,7 @@ write_xlsx(dev_ind_data, "Construct_dataset/PC_MDBs_only/dev_ind_data_pc_MDBs.xl
 ################################################################################
 
 ############################### 11.1: IHME data ################################
-health_spend_df <- read_csv("Construct_dataset/Downloaded_data/IHME_health_spending_data.csv") # covers more years than WB
+health_spend_df <- read_csv("Construct_dataset/Downloaded_data/ihme_health_spending_95-23_data.CSV") # covers more years than WB
 
 health_spend_df <- health_spend_df %>%
   select(c(location_id, iso3, year, 
